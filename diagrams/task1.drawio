@@ -184,7 +184,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="ZEVyvkj1VugqwSTjGWgy" name="SSR Frontend">
-    <mxGraphModel dx="855" dy="1700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="855" dy="1677" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -494,11 +494,14 @@
         <mxCell id="72YSsaiRPLNpzkIsja0I-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Propuesta diagrama de arquitectura&lt;/h1&gt;&lt;p&gt;En este diagrama esperamos mostrar a un alto nivel el diseño de una aplicación que se compone de un frontend en Vue.js el cual es Server Side Render(SSR), un backend en golang y una base de datos RDS Mysql. Se muestran todos los componentes clave involucrados en el diseño de tal forma de optimizar el costo, proveer alta disponibilidad y siempre manteniendo las mejores practicas de seguridad.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="43" y="-180" width="770" height="120" as="geometry" />
         </mxCell>
+        <mxCell id="kktdWlxP0qjxxbtxhZuL-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;AWS&lt;/h1&gt;&lt;p&gt;Juan Andrés Vivas&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="718" width="180" height="120" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram name="SPA Frontend" id="A1HBRzQxUl-MiHfVwIIB">
-    <mxGraphModel dx="1026" dy="1820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="AH1wI-OAd1k5MtHGwiSd-0" />
         <mxCell id="AH1wI-OAd1k5MtHGwiSd-1" parent="AH1wI-OAd1k5MtHGwiSd-0" />
@@ -753,6 +756,9 @@
         </mxCell>
         <mxCell id="-syezE_Jo9RrJqlyGNxA-0" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Propuesta diagrama de arquitectura&lt;/h1&gt;&lt;p&gt;En este diagrama esperamos mostrar a un alto nivel el diseño de una aplicación que se compone de un frontend Single Page Application en Vue.js, un backend en golang y una base de datos RDS Mysql. Se muestran todos los componentes clave involucrados en el diseño de tal forma de optimizar el costo, proveer alta disponibilidad y siempre manteniendo las mejores practicas de seguridad.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="AH1wI-OAd1k5MtHGwiSd-1">
           <mxGeometry x="40" y="-180" width="770" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="WRytxbmXcT2p1tvDZVrO-0" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;AWS&lt;/h1&gt;&lt;p&gt;Juan Andrés Vivas&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="AH1wI-OAd1k5MtHGwiSd-1">
+          <mxGeometry x="40" y="718" width="180" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
