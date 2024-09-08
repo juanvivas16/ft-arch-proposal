@@ -321,7 +321,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="SPA Frontend" id="A1HBRzQxUl-MiHfVwIIB">
-    <mxGraphModel dx="586" dy="1495" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1026" dy="1791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="AH1wI-OAd1k5MtHGwiSd-0" />
         <mxCell id="AH1wI-OAd1k5MtHGwiSd-1" parent="AH1wI-OAd1k5MtHGwiSd-0" />
@@ -366,9 +366,6 @@
         </mxCell>
         <mxCell id="AH1wI-OAd1k5MtHGwiSd-15" value="Private subnet" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#00A4A6;fillColor=#E6F6F7;verticalAlign=top;align=left;spacingLeft=30;fontColor=#147EBA;dashed=0;" parent="AH1wI-OAd1k5MtHGwiSd-10" vertex="1">
           <mxGeometry x="32" y="220" width="220" height="140" as="geometry" />
-        </mxCell>
-        <mxCell id="SIGgBk6LS004jS6jAlDm-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="AH1wI-OAd1k5MtHGwiSd-10" source="AH1wI-OAd1k5MtHGwiSd-18" target="SIGgBk6LS004jS6jAlDm-0">
-          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="AH1wI-OAd1k5MtHGwiSd-18" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#8C4FFF;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.application_load_balancer;" parent="AH1wI-OAd1k5MtHGwiSd-10" vertex="1">
           <mxGeometry x="260" y="11" width="30" height="30" as="geometry" />
@@ -417,6 +414,9 @@
         </mxCell>
         <mxCell id="SIGgBk6LS004jS6jAlDm-0" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeColor=#FF8000;" vertex="1" parent="AH1wI-OAd1k5MtHGwiSd-10">
           <mxGeometry x="94.5" y="115" width="363" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="sgmAze72-7wzaxhs5Yiw-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.496;entryY=0.031;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="AH1wI-OAd1k5MtHGwiSd-10" source="AH1wI-OAd1k5MtHGwiSd-18" target="SIGgBk6LS004jS6jAlDm-0">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="AH1wI-OAd1k5MtHGwiSd-31" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;fontColor=#333333;strokeColor=#666666;" parent="AH1wI-OAd1k5MtHGwiSd-1" vertex="1">
           <mxGeometry x="365" y="-50" width="120" height="60" as="geometry" />
