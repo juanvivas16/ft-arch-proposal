@@ -19,7 +19,7 @@ I hope the proposal meets your expectations, and any feedback or suggestions for
       - [Trade-offs Between Cost and Performance:](#trade-offs-between-cost-and-performance)
     - [2. Load Balancing and Auto-Scaling Strategies](#2-load-balancing-and-auto-scaling-strategies)
       - [AWS Services Utilized:](#aws-services-utilized)
-      - [Cost Configuration:](#cost-configuration)
+      - [Minimizing cost while maintaining availability:](#minimizing-cost-while-maintaining-availability)
       - [Cost Implications:](#cost-implications)
     - [3. Security and Compliance Considerations](#3-security-and-compliance-considerations)
       - [Security Measures:](#security-measures)
@@ -39,7 +39,7 @@ I hope the proposal meets your expectations, and any feedback or suggestions for
 There are two main approaches for front-end architecture in a web application: Server-Side Rendering (SSR) and Single-Page Application (SPA). In the SSR approach, the server handles rendering dynamic HTML, which improves SEO and initial performance but requires more compute resources, increasing costs. On the other hand, the SPA approach shifts the workload to the client, allowing static content to be hosted on storage solutions like S3 and distributed globally via a CDN like CloudFront, optimizing costs and enhancing speed. The choice between these approaches depends on the application’s needs in terms of performance, SEO, and scalability.
 
 - **Diagram with SSR**: 
-![Link to SSR Architecture](diagrams/tasl1-ssr.png)
+![Link to SSR Architecture](diagrams/task1-ssr.png)
 - **Diagram with SPA**: 
 ![Link to SPA Architecture](diagrams/task1-spa.png)
 
@@ -92,6 +92,7 @@ Each component in the architecture diagram is selected based on performance, cos
   
 #### Trade-offs Between Cost and Performance:
 - Use ECS Fargate instances instead of EC2 or EKS to reduce costs by paying only for the resources used and saving on management overhead.
+- Use Fargate spot instances if you need to reduce costs even further.
 - ECS Fargate is advantageous because the Docker container gives us more flexibility if we later want to migrate the solution to a container orchestrator. However, if we wanted to optimize costs to the maximum, I would use AWS Lambda instead.
 - Having a single database instance in one availability zone (AZ) reduces costs, although it may lead to downtime if that AZ becomes unavailable.
 - Use S3 Glacier for database backups and apply a lifecycle policy with the minimum retention time to optimize costs, knowing that it may take longer to retrieve the data.
@@ -102,36 +103,55 @@ Each component in the architecture diagram is selected based on performance, cos
 
 ### 2. Load Balancing and Auto-Scaling Strategies
 
-- **Diagram**: [Link to Load Balancing and Auto-Scaling Diagram](#)
+The Application Load Balancer (ALB) will distribute traffic evenly among all running ECS instances, while Fargate will handle scaling based on both the incoming traffic and metrics such as CPU and memory utilization.
+
+- **Diagram**: 
+- ![Link to Load Balancing and Auto-Scaling Diagram](diagrams/task1-alb.png)
 
 #### AWS Services Utilized:
-- **Elastic Load Balancer (ELB)**: For distributing incoming traffic across multiple EC2 instances to ensure high availability.
-- **Auto Scaling Groups (ASG)**: To dynamically scale EC2 instances based on traffic patterns, ensuring cost-efficiency.
+- **Application Load Balancer (ALB)**: For distributing incoming traffic across multiple ECS instances to ensure high availability.
+- **Fargate**: To dynamically scale ECS instances based on traffic and demand, ensuring cost-efficiency.
 
-#### Cost Configuration:
-- Scaling policies are configured to optimize for low-demand periods by using spot instances and scaling out only during peak traffic times.
+#### Minimizing cost while maintaining availability:
+
+- Maintain one instance in each Availability Zone (AZ) to ensure the application’s availability at all times, both for the backend and frontend.
+- Based on peak hours, define the optimal number of instances that can handle the load (using historical metrics, load testing, etc.).
+- Scale up instances if CPU or memory usage remains above 80% for more than 5 minutes.
+- Scale down instances if CPU or memory usage stays at 20% or lower for more than 10 minutes.
+- Scaling should add or remove one instance at a time to control costs without sacrificing availability.
+- Define efficient load balancing rules based on paths.
   
 #### Cost Implications:
-- Aggressive down-scaling policies help in keeping the costs low during periods of low traffic.
-- By utilizing **AWS CloudWatch** to monitor performance metrics, auto-scaling triggers are fine-tuned to prevent unnecessary resource usage, thus controlling costs.
+- Maintaining 2 instances in each Availability Zone creates a constant cost that could be avoided by sacrificing availability, as there would be a delay if no instances were present.
+- Optimizing scaling metrics during peak demand hours will significantly help in reducing costs.
+- Having controlled scaling will help keep costs under control, as only the necessary instances will be created without over-provisioning the infrastructure.
 
 ---
 
 ### 3. Security and Compliance Considerations
 
-- **Diagram**: [Link to Security Diagram](#)
+Security is a fundamental part of any system. For our proposal, we will have the following components to ensure data protection measures are met at all times.
 
 #### Security Measures:
-- **VPCs with Subnets**: Segregation of public and private subnets to ensure that critical infrastructure is not exposed to the internet.
-- **Security Groups**: Configured to restrict traffic to only necessary ports.
-- **IAM Roles and Policies**: Least privilege access control to resources, ensuring minimal attack surface.
-
+- VPCs with Subnets: Segregation of public and private subnets to ensure that critical infrastructure is not exposed to the internet. The backend and RDS database are isolated from public access.
+- Security Groups: Configured to restrict traffic to only the necessary CIDRs and ports. The frontend only receives traffic from the public ALB, the backend only receives traffic from the private ALB and is allowed to send traffic to the RDS. The RDS only allows traffic from the backend ECS instances.
+- IAM Roles and Policies: Least privilege access control is enforced to ensure minimal attack surface on all resources.
+- ALB with Certificate Manager: A TLS certificate is created to encrypt all traffic in transit across the entire architecture.
+- ECS Instances: ECS instances have disk encryption enabled to ensure encryption of data at rest, as well as for RDS instances.
+- S3 Buckets: S3 buckets have encryption keys enabled to securely store all contents.
+- Secrets Manager: Used to encrypt and securely store all the secrets required by the frontend and backend applications.
+- NAT Gateway that secures all outbound traffic through a single point
+- 
 #### Cost Implications:
-- **AWS Shield** (for DDoS protection) incurs additional costs but ensures compliance with security best practices.
-- **Encryption with AWS KMS** introduces some overhead but is critical for ensuring data protection.
+In general, using all these resources within AWS would not significantly increase the cost of our infrastructure, except for the following exceptions:
+
+- The number of secrets stored in Secrets Manager.
+- The amount of outbound traffic through the NAT Gateway.
+- If we were to use TLS certificates not issued by AWS.
 
 #### Balance of Security and Cost-Effectiveness:
-- Managed services like **AWS WAF** provide security features that would otherwise require significant operational overhead, balancing cost and security needs.
+
+The cost of balancing security is not always convenient, as a single security breach could lead to much higher associated costs than maintaining preventive measures. In my opinion, considering the low cost of these security measures within AWS, I wouldn’t discard any of them. However, I would consider adding more layers of security, such as a WAF before the ALB, to prevent DDoS attacks.
 
 ---
 
@@ -149,7 +169,4 @@ Each module represents a critical part of the infrastructure, such as networking
 ### 2. Infrastructure Deployment
 
 #### Steps to Deploy:
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/username/repository.git
-   cd repository/terraform
+1. 
