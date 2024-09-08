@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.6 Safari/605.1.15" version="24.7.12" pages="2">
   <diagram id="ZEVyvkj1VugqwSTjGWgy" name="SSR Frontend">
-    <mxGraphModel dx="1026" dy="1791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="708" dy="1577" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -108,11 +108,8 @@
         <mxCell id="j2Fal2WCx0PZaMNevPyt-32" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#ED7100;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.fargate;" parent="j2Fal2WCx0PZaMNevPyt-47" vertex="1">
           <mxGeometry x="395" y="120" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="j2Fal2WCx0PZaMNevPyt-33" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;ECS Fargate Frontend&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="j2Fal2WCx0PZaMNevPyt-47" vertex="1">
+        <mxCell id="j2Fal2WCx0PZaMNevPyt-33" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;ECS Frontend&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="j2Fal2WCx0PZaMNevPyt-47" vertex="1">
           <mxGeometry x="106" y="146" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="j2Fal2WCx0PZaMNevPyt-34" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;ECS Fargate Frontend&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="j2Fal2WCx0PZaMNevPyt-47" vertex="1">
-          <mxGeometry x="379" y="146" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="j2Fal2WCx0PZaMNevPyt-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="j2Fal2WCx0PZaMNevPyt-47" source="j2Fal2WCx0PZaMNevPyt-36" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -127,12 +124,6 @@
         </mxCell>
         <mxCell id="j2Fal2WCx0PZaMNevPyt-50" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#ED7100;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.fargate;" parent="j2Fal2WCx0PZaMNevPyt-47" vertex="1">
           <mxGeometry x="395" y="270" width="30" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="j2Fal2WCx0PZaMNevPyt-51" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;ECS Fargate Backend&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="j2Fal2WCx0PZaMNevPyt-47" vertex="1">
-          <mxGeometry x="106" y="296" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="j2Fal2WCx0PZaMNevPyt-52" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;ECS Fargate Backend&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="j2Fal2WCx0PZaMNevPyt-47" vertex="1">
-          <mxGeometry x="379" y="296" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="j2Fal2WCx0PZaMNevPyt-53" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;Auto Scaling group&lt;/font&gt;" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.groupCenter;grIcon=mxgraph.aws4.group_auto_scaling_group;grStroke=1;strokeColor=#D86613;fillColor=none;verticalAlign=top;align=center;fontColor=#D86613;dashed=1;spacingTop=25;" parent="j2Fal2WCx0PZaMNevPyt-47" vertex="1">
           <mxGeometry x="70" y="260" width="410" height="70" as="geometry" />
@@ -175,6 +166,15 @@
         </mxCell>
         <mxCell id="GgZcpWPEvXw06-qVJ9ln-1" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#DD344C;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.secrets_manager;" vertex="1" parent="j2Fal2WCx0PZaMNevPyt-47">
           <mxGeometry x="580" y="54" width="57" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="BoRVVC6UJL5IyN1c8tTt-1" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;ECS Frontend&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="j2Fal2WCx0PZaMNevPyt-47">
+          <mxGeometry x="380" y="146" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BoRVVC6UJL5IyN1c8tTt-2" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;ECS Backend&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="j2Fal2WCx0PZaMNevPyt-47">
+          <mxGeometry x="106" y="296" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="BoRVVC6UJL5IyN1c8tTt-3" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;ECS Backend&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="j2Fal2WCx0PZaMNevPyt-47">
+          <mxGeometry x="380" y="296" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="j2Fal2WCx0PZaMNevPyt-65" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
           <mxGeometry x="365" y="-50" width="120" height="60" as="geometry" />
@@ -286,7 +286,7 @@
         <mxCell id="snMZby3Yppjnr2zLVf3X-10" value="&lt;p style=&quot;margin: 0px; font-style: normal; font-variant-caps: normal; font-stretch: normal; line-height: normal; font-size-adjust: none; font-kerning: auto; font-variant-alternates: normal; font-variant-ligatures: normal; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-position: normal; font-feature-settings: normal; font-optical-sizing: auto; font-variation-settings: normal; color: rgb(14, 14, 14);&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;Application Load Balancer (ALB) that balances all incoming traffic from clients. It will distribute the traffic among the Fargate task group and provide metrics as well as an additional security layer.​&lt;/font&gt;&lt;/p&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="918.5" y="60.5" width="449" height="89.5" as="geometry" />
         </mxCell>
-        <mxCell id="snMZby3Yppjnr2zLVf3X-11" value="&lt;p style=&quot;margin: 0px; font-style: normal; font-variant-caps: normal; font-stretch: normal; line-height: normal; font-size-adjust: none; font-kerning: auto; font-variant-alternates: normal; font-variant-ligatures: normal; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-position: normal; font-feature-settings: normal; font-optical-sizing: auto; font-variation-settings: normal; color: rgb(14, 14, 14);&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;ECS Fargate with Auto Scaling Group for front-end elasticity. This setup allows for cost optimization by maintaining the minimum scale required for our clients and automatically scaling up as demand increases.&lt;/font&gt;&lt;/p&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="snMZby3Yppjnr2zLVf3X-11" value="&lt;p style=&quot;margin: 0px; font-style: normal; font-variant-caps: normal; font-stretch: normal; line-height: normal; font-size-adjust: none; font-kerning: auto; font-variant-alternates: normal; font-variant-ligatures: normal; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-position: normal; font-feature-settings: normal; font-optical-sizing: auto; font-variation-settings: normal; color: rgb(14, 14, 14);&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;ECS&lt;/font&gt;&amp;nbsp;with Auto Scaling Group for front-end and back-end elasticity. This setup allows for cost optimization by maintaining the minimum scale required for our clients and automatically scaling up as demand increases.&lt;/p&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="918.5" y="158.75" width="450" height="86.5" as="geometry" />
         </mxCell>
         <mxCell id="snMZby3Yppjnr2zLVf3X-12" value="&lt;p style=&quot;margin: 0px; font-style: normal; font-variant-caps: normal; font-stretch: normal; line-height: normal; font-size-adjust: none; font-kerning: auto; font-variant-alternates: normal; font-variant-ligatures: normal; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-position: normal; font-feature-settings: normal; font-optical-sizing: auto; font-variation-settings: normal; color: rgb(14, 14, 14);&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;Application Load Balancer (ALB) in the back-end, balancing all traffic coming from the front-end. It distributes the load across all back-end ECS instances and adds a layer of security for data in transit.&lt;/font&gt;&lt;/p&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="1" vertex="1">
@@ -317,7 +317,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="SPA Frontend" id="A1HBRzQxUl-MiHfVwIIB">
-    <mxGraphModel dx="1026" dy="1791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="708" dy="1577" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="AH1wI-OAd1k5MtHGwiSd-0" />
         <mxCell id="AH1wI-OAd1k5MtHGwiSd-1" parent="AH1wI-OAd1k5MtHGwiSd-0" />
@@ -377,7 +377,7 @@
           <mxGeometry x="260" y="11" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="AH1wI-OAd1k5MtHGwiSd-19" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;ALB&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="AH1wI-OAd1k5MtHGwiSd-10" vertex="1">
-          <mxGeometry x="261" y="80" width="30" height="10" as="geometry" />
+          <mxGeometry x="261" y="46" width="30" height="10" as="geometry" />
         </mxCell>
         <mxCell id="AH1wI-OAd1k5MtHGwiSd-20" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#ED7100;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.fargate;" parent="AH1wI-OAd1k5MtHGwiSd-10" vertex="1">
           <mxGeometry x="121" y="120" width="30" height="30" as="geometry" />
@@ -385,11 +385,8 @@
         <mxCell id="AH1wI-OAd1k5MtHGwiSd-21" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#ED7100;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.fargate;" parent="AH1wI-OAd1k5MtHGwiSd-10" vertex="1">
           <mxGeometry x="396" y="120" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="AH1wI-OAd1k5MtHGwiSd-22" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;ECS Fargate Backend&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="AH1wI-OAd1k5MtHGwiSd-10" vertex="1">
+        <mxCell id="AH1wI-OAd1k5MtHGwiSd-22" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;ECS Backend&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="AH1wI-OAd1k5MtHGwiSd-10" vertex="1">
           <mxGeometry x="107" y="146" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="AH1wI-OAd1k5MtHGwiSd-23" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;ECS Fargate Backend&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="AH1wI-OAd1k5MtHGwiSd-10" vertex="1">
-          <mxGeometry x="380" y="146" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="AH1wI-OAd1k5MtHGwiSd-24" value="&lt;font style=&quot;font-size: 7px;&quot;&gt;Auto Scaling group&lt;/font&gt;" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.groupCenter;grIcon=mxgraph.aws4.group_auto_scaling_group;grStroke=1;strokeColor=#D86613;fillColor=none;verticalAlign=top;align=center;fontColor=#D86613;dashed=1;spacingTop=25;" parent="AH1wI-OAd1k5MtHGwiSd-10" vertex="1">
           <mxGeometry x="71" y="110" width="410" height="70" as="geometry" />
@@ -413,10 +410,16 @@
           <mxGeometry x="57" y="210" width="444" height="160" as="geometry" />
         </mxCell>
         <mxCell id="bHjSSPNl44PEYlqtmkhl-2" value="3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=22;" parent="AH1wI-OAd1k5MtHGwiSd-10" vertex="1">
-          <mxGeometry x="167" y="120" width="23" height="24" as="geometry" />
+          <mxGeometry x="237" width="23" height="20" as="geometry" />
         </mxCell>
         <mxCell id="bHjSSPNl44PEYlqtmkhl-3" value="4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=22;" parent="AH1wI-OAd1k5MtHGwiSd-10" vertex="1">
-          <mxGeometry x="167" y="240" width="33" height="30" as="geometry" />
+          <mxGeometry x="81" y="250" width="23" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="bHjSSPNl44PEYlqtmkhl-4" value="5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=22;" parent="AH1wI-OAd1k5MtHGwiSd-10" vertex="1">
+          <mxGeometry x="88" y="115.19" width="16" height="19.62" as="geometry" />
+        </mxCell>
+        <mxCell id="xyHjVuIyvoCjaCMftg_q-0" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;ECS Backend&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="AH1wI-OAd1k5MtHGwiSd-10">
+          <mxGeometry x="381" y="146" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="AH1wI-OAd1k5MtHGwiSd-31" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;fontColor=#333333;strokeColor=#666666;" parent="AH1wI-OAd1k5MtHGwiSd-1" vertex="1">
           <mxGeometry x="365" y="-50" width="120" height="60" as="geometry" />
@@ -537,8 +540,8 @@
         <mxCell id="j1pXVIU7Cxo1gCFwayRz-12" value="&lt;p style=&quot;margin: 0px; font-style: normal; font-variant-caps: normal; font-stretch: normal; line-height: normal; font-size-adjust: none; font-kerning: auto; font-variant-alternates: normal; font-variant-ligatures: normal; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-position: normal; font-feature-settings: normal; font-optical-sizing: auto; font-variation-settings: normal; color: rgb(14, 14, 14);&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;RDS MySQL Database, which will only be accessible from the back-end. It includes a high-availability replica in another availability zone for failover protection. Additionally, automated backups are stored in an S3 bucket.&lt;/font&gt;&lt;/p&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="AH1wI-OAd1k5MtHGwiSd-1" vertex="1">
           <mxGeometry x="917" y="321.5" width="450" height="78.5" as="geometry" />
         </mxCell>
-        <mxCell id="j1pXVIU7Cxo1gCFwayRz-13" value="&lt;p style=&quot;margin: 0px; font-style: normal; font-variant-caps: normal; font-stretch: normal; line-height: normal; font-size-adjust: none; font-kerning: auto; font-variant-alternates: normal; font-variant-ligatures: normal; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-position: normal; font-feature-settings: normal; font-optical-sizing: auto; font-variation-settings: normal; color: rgb(14, 14, 14);&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;S3 Buckets that securely store the backups of our databases.&lt;/font&gt;&lt;/p&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="AH1wI-OAd1k5MtHGwiSd-1" vertex="1">
-          <mxGeometry x="917" y="413" width="449" height="57" as="geometry" />
+        <mxCell id="j1pXVIU7Cxo1gCFwayRz-13" value="&lt;p style=&quot;margin: 0px; font-style: normal; font-variant-caps: normal; font-stretch: normal; line-height: normal; font-size-adjust: none; font-kerning: auto; font-variant-alternates: normal; font-variant-ligatures: normal; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-position: normal; font-feature-settings: normal; font-optical-sizing: auto; font-variation-settings: normal; color: rgb(14, 14, 14);&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;ECS&lt;/font&gt;&amp;nbsp;with Auto Scaling Group for front-end and back-end elasticity. This setup allows for cost optimization by maintaining the minimum scale required for our clients and automatically scaling up as demand increases.&lt;br&gt;&lt;/p&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="AH1wI-OAd1k5MtHGwiSd-1" vertex="1">
+          <mxGeometry x="917" y="401" width="449" height="57" as="geometry" />
         </mxCell>
         <mxCell id="j1pXVIU7Cxo1gCFwayRz-14" value="&lt;p style=&quot;margin: 0px; font-style: normal; font-variant-caps: normal; font-stretch: normal; line-height: normal; font-size-adjust: none; font-kerning: auto; font-variant-alternates: normal; font-variant-ligatures: normal; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-position: normal; font-feature-settings: normal; font-optical-sizing: auto; font-variation-settings: normal; color: rgb(14, 14, 14);&quot;&gt;&lt;font face=&quot;Helvetica&quot;&gt;Container Registry where the images of the containers deployed on ECS instances are stored, ensuring they can be quickly retrieved in case of a failure.​&lt;/font&gt;&lt;/p&gt;" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;" parent="AH1wI-OAd1k5MtHGwiSd-1" vertex="1">
           <mxGeometry x="918.5" y="474" width="450" height="66" as="geometry" />
@@ -550,10 +553,7 @@
           <mxGeometry x="917" y="678" width="453" height="112" as="geometry" />
         </mxCell>
         <mxCell id="bHjSSPNl44PEYlqtmkhl-0" value="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=22;" parent="AH1wI-OAd1k5MtHGwiSd-1" vertex="1">
-          <mxGeometry x="374" y="65.25" width="25" height="29.5" as="geometry" />
-        </mxCell>
-        <mxCell id="bHjSSPNl44PEYlqtmkhl-4" value="5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=22;" parent="AH1wI-OAd1k5MtHGwiSd-1" vertex="1">
-          <mxGeometry x="40" y="321.5" width="30" height="28.5" as="geometry" />
+          <mxGeometry x="389" y="79.5" width="16" height="19.5" as="geometry" />
         </mxCell>
         <mxCell id="bHjSSPNl44PEYlqtmkhl-5" value="6" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=22;" parent="AH1wI-OAd1k5MtHGwiSd-1" vertex="1">
           <mxGeometry x="48" y="497.5" width="22" height="25" as="geometry" />
