@@ -38,7 +38,7 @@ variable "rds_allocated_storage" {
 variable "rds_instance_class" {
   description = "The instance class of the RDS database"
   type        = string
-  default     = "db.t2.medium"
+  default     = "db.t4g.small"
 }
 
 variable "rds_multi_az" {

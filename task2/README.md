@@ -53,6 +53,7 @@ This repository contains all the Terraform modules and configurations required t
       - [**Objective**: Verify that static assets are correctly stored in the S3 bucket and accessible publicly in read-only mode.](#objective-verify-that-static-assets-are-correctly-stored-in-the-s3-bucket-and-accessible-publicly-in-read-only-mode)
       - [Expected Outcome:](#expected-outcome-3)
       - [Verification:](#verification-3)
+    - [5. Troubleshooting Tips](#5-troubleshooting-tips)
 
 ---
 
@@ -361,3 +362,8 @@ make test
 - Test actions such as file deletion or modification from a public endpoint, which should be denied.
 
 ---
+### 5. Troubleshooting Tips
+- Communication issue with ALB: You should verify that the health check of the ASG is functioning correctly. To do this, check the routing rules, security groups, etc.
+- Instances unavailable or invalid: You can try changing the instance type you are using from EC2 or RDS to another one. Otherwise, you may need to wait for AWS to increase your quota before trying again.
+- Permission errors when creating a resource: Check the role and permissions assigned to the Terraform user, and gradually escalate permissions until you find the one needed.
+- Invalid SSH access to instances: Ensure that your SSH key is correct and has been added to your computer.
