@@ -20,7 +20,8 @@ resource "aws_launch_configuration" "ec2_lc" {
   image_id        = data.aws_ami.ubuntu.id
   instance_type   = var.instance_type
   security_groups = [var.security_group_id]
-  user_data       = var.user_data
+  user_data       = var.user_data_file_path
+  key_name        = var.key_name
 
   lifecycle {
     create_before_destroy = true

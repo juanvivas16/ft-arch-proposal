@@ -35,6 +35,7 @@ No modules.
 | <a name="input_iam_instance_profile"></a> [iam\_instance\_profile](#input\_iam\_instance\_profile) | IAM instance profile for the EC2 instance (optional) | `string` | `""` | no |
 | <a name="input_instance_name"></a> [instance\_name](#input\_instance\_name) | Tag name for the EC2 instances | `string` | n/a | yes |
 | <a name="input_instance_type"></a> [instance\_type](#input\_instance\_type) | Instance type to be used for EC2 instances | `string` | n/a | yes |
+| <a name="input_key_name"></a> [key\_name](#input\_key\_name) | The name of the key pair | `string` | n/a | yes |
 | <a name="input_max_size"></a> [max\_size](#input\_max\_size) | Maximum number of instances in the Auto Scaling Group | `number` | `5` | no |
 | <a name="input_metrics_granularity"></a> [metrics\_granularity](#input\_metrics\_granularity) | Granularity of the metrics (1Minute, 5Minutes, 1Hour) | `string` | `"1Minute"` | no |
 | <a name="input_min_size"></a> [min\_size](#input\_min\_size) | Minimum number of instances in the Auto Scaling Group | `number` | `1` | no |
@@ -43,7 +44,7 @@ No modules.
 | <a name="input_scale_up"></a> [scale\_up](#input\_scale\_up) | Auto Scaling Policy variables | <pre>object({<br>    scaling_adjustment = number<br>    adjustment_type    = string<br>    cooldown           = number<br>  })</pre> | n/a | yes |
 | <a name="input_security_group_id"></a> [security\_group\_id](#input\_security\_group\_id) | Security Group ID for the EC2 instances | `string` | n/a | yes |
 | <a name="input_target_group_arn"></a> [target\_group\_arn](#input\_target\_group\_arn) | The ARN of the target group for the ALB | `string` | n/a | yes |
-| <a name="input_user_data"></a> [user\_data](#input\_user\_data) | User data script to run when launching the EC2 instances | `string` | `""` | no |
+| <a name="input_user_data_file_path"></a> [user\_data\_file\_path](#input\_user\_data\_file\_path) | User data script to run when launching the EC2 instances | `string` | `""` | no |
 
 ## Outputs
 

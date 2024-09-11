@@ -31,7 +31,7 @@ variable "desired_capacity" {
   default     = 1
 }
 
-variable "user_data" {
+variable "user_data_file_path" {
   description = "User data script to run when launching the EC2 instances"
   type        = string
   default     = ""
@@ -108,4 +108,9 @@ variable "cpu_alarm_down" {
     period              = 120
     statistic           = "Average"
   }
+}
+
+variable "key_name" {
+  description = "The name of the key pair"
+  type        = string
 }

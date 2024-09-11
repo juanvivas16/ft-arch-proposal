@@ -23,10 +23,11 @@ resource "aws_lb_target_group" "target_group" {
   health_check {
     healthy_threshold   = 3
     unhealthy_threshold = 3
-    timeout             = 5
-    interval            = 30
+    timeout             = 3
+    interval            = 15
     path                = var.health_check_path
     matcher             = "200"
+    protocol            = "HTTP"
   }
 
   tags = var.tags
@@ -43,4 +44,18 @@ resource "aws_lb_listener" "alb_listener" {
     target_group_arn = aws_lb_target_group.target_group.arn
   }
   tags = var.tags
+}
+
+resource "aws_lb_listener_rule" "alb_listener_rule" {
+  listener_arn = aws_lb_listener.alb_listener.arn
+  priority     = 1
+  action {
+    type             = "forward"
+    target_group_arn = aws_lb_target_group.target_group.arn
+  }
+  condition {
+    path_pattern {
+      values = [var.health_check_path]
+    }
+  }
 }
