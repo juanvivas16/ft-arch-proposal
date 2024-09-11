@@ -16,7 +16,6 @@
       - [Cost Implications:](#cost-implications-1)
       - [Balance of Security and Cost-Effectiveness:](#balance-of-security-and-cost-effectiveness)
 
----
 
 ### 1. High-Level Architecture Diagram
 
@@ -83,7 +82,6 @@ Each component in the architecture diagram is selected based on performance, cos
 - Setting aggressive Fargate scaling policies (e.g., minimizing the number of running instances) could quickly affect performance if there are constant traffic spikes.
 - Using a single availability zone reduces network costs at the expense of losing high availability in case of a failure.
   
----
 
 ### 2. Load Balancing and Auto-Scaling Strategies
 
@@ -110,7 +108,6 @@ The Application Load Balancer (ALB) will distribute traffic evenly among all run
 - Optimizing scaling metrics during peak demand hours will significantly help in reducing costs.
 - Having controlled scaling will help keep costs under control, as only the necessary instances will be created without over-provisioning the infrastructure.
 
----
 
 ### 3. Security and Compliance Considerations
 

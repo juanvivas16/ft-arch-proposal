@@ -37,7 +37,7 @@ variable "sg_alb_egress_rules" {
   default = {
     all_outbound = {
       from_port   = 0
-      to_port     = 0
+      to_port     = 65535
       ip_protocol = "tcp"
       cidr_ipv4   = "0.0.0.0/0"
     }
@@ -81,7 +81,7 @@ variable "sg_ec2_egress_rules" {
   default = {
     all_outbound = {
       from_port   = 0
-      to_port     = 0
+      to_port     = 65535
       ip_protocol = "-1"
       cidr_ipv4   = "0.0.0.0/0"
     },
@@ -127,7 +127,7 @@ variable "sg_rds_egress_rules" {
   default = {
     all_outbound = {
       from_port   = 0
-      to_port     = 0
+      to_port     = 65535
       ip_protocol = "-1"
       cidr_ipv4   = "0.0.0.0/0"
     }

@@ -16,14 +16,12 @@ I hope the proposal meets your expectations, and any feedback or suggestions for
   - [Task 2: Automated Infrastructure with Terraform](#task-2-automated-infrastructure-with-terraform)
   - [Decisions made in the design, challenges encountered, and potential future improvements for this challenge](#decisions-made-in-the-design-challenges-encountered-and-potential-future-improvements-for-this-challenge)
 
----
 
 ## Task 1: High-Level Architecture Proposal
 In this section, we design a proposal for the AWS infrastructure using **Draw.io** as the diagramming tool. 
 
 [Task1](task1/README.md)
 
----
 
 ## Task 2: Automated Infrastructure with Terraform
 In this section, we build an automated AWS infrastructure using **Terraform**.

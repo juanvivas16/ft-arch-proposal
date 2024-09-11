@@ -39,27 +39,3 @@ variable "vpc_private_subnets" {
     "1" = { cidr = "10.0.4.0/24", az = "us-east-1b" }
   }
 }
-
-variable "public_nacl_egress" {
-  description = "Network ACL egress rules"
-  default = {
-    "rule_no"    = "100"
-    "protocol"   = "tcp"
-    "action"     = "allow"
-    "cidr_block" = "0.0.0.0/0"
-    "from_port"  = "80"
-    "to_port"    = "80"
-  }
-}
-
-variable "public_nacl_ingress" {
-  description = "Network ACL ingress rules"
-  default = {
-    "rule_no"    = "100"
-    "protocol"   = "tcp"
-    "action"     = "allow"
-    "cidr_block" = "0.0.0.0/0"
-    "from_port"  = "80"
-    "to_port"    = "80"
-  }
-}

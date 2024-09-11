@@ -35,8 +35,6 @@ No modules.
 | <a name="input_enable_dns_support"></a> [enable\_dns\_support](#input\_enable\_dns\_support) | Enable DNS support | `bool` | `true` | no |
 | <a name="input_env"></a> [env](#input\_env) | Environment | `string` | `"stg"` | no |
 | <a name="input_private_subnets"></a> [private\_subnets](#input\_private\_subnets) | Map of private subnets with CIDR and availability zone | <pre>map(object({<br>    cidr = string<br>    az   = string<br>  }))</pre> | <pre>{<br>  "0": {<br>    "az": "us-east-1a",<br>    "cidr": "10.0.3.0/24"<br>  },<br>  "1": {<br>    "az": "us-east-1b",<br>    "cidr": "10.0.4.0/24"<br>  }<br>}</pre> | no |
-| <a name="input_public_nacl_egress"></a> [public\_nacl\_egress](#input\_public\_nacl\_egress) | Network ACL egress rules | `map(string)` | n/a | yes |
-| <a name="input_public_nacl_ingress"></a> [public\_nacl\_ingress](#input\_public\_nacl\_ingress) | Network ACL ingress rules | `map(string)` | n/a | yes |
 | <a name="input_public_subnets"></a> [public\_subnets](#input\_public\_subnets) | Map of public subnets with CIDR and availability zone | <pre>map(object({<br>    cidr = string<br>    az   = string<br>  }))</pre> | <pre>{<br>  "0": {<br>    "az": "us-east-1a",<br>    "cidr": "10.0.1.0/24"<br>  },<br>  "1": {<br>    "az": "us-east-1b",<br>    "cidr": "10.0.2.0/24"<br>  }<br>}</pre> | no |
 | <a name="input_vpc_cidr"></a> [vpc\_cidr](#input\_vpc\_cidr) | CIDR block for the VPC | `string` | `"10.0.0.0/16"` | no |
 | <a name="input_vpc_name"></a> [vpc\_name](#input\_vpc\_name) | The name of the VPC | `string` | n/a | yes |

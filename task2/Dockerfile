@@ -12,6 +12,9 @@ RUN curl -fsSL https://releases.hashicorp.com/terraform/${TF_VERSION}/terraform_
 RUN curl -fsSL https://github.com/goss-org/goss/releases/latest/download/goss-linux-amd64 -o /usr/local/bin/goss \
     && chmod +x /usr/local/bin/goss
 
+RUN curl -fsSL https://github.com/aquasecurity/tfsec/releases/latest/download/tfsec-linux-amd64 -o /usr/local/bin/tfsec \
+    && chmod +x /usr/local/bin/tfsec
+
 RUN mkdir /app
 
 ADD entrypoint.sh /app/entrypoint.sh

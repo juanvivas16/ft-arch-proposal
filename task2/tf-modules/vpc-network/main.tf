@@ -18,34 +18,6 @@ resource "aws_internet_gateway" "igw" {
   }
 }
 
-# Network ACL
-# resource "aws_network_acl" "public_nacl" {
-#   vpc_id = aws_vpc.vpc.id
-
-#   egress {
-#     rule_no    = var.public_nacl_egress["rule_no"]
-#     protocol   = var.public_nacl_egress["protocol"]
-#     action     = var.public_nacl_egress["action"]
-#     cidr_block = var.public_nacl_egress["cidr_block"]
-#     from_port  = var.public_nacl_egress["from_port"]
-#     to_port    = var.public_nacl_egress["to_port"]
-#   }
-
-#   ingress {
-#     rule_no    = var.public_nacl_ingress["rule_no"]
-#     protocol   = var.public_nacl_ingress["protocol"]
-#     action     = var.public_nacl_ingress["action"]
-#     cidr_block = var.public_nacl_ingress["cidr_block"]
-#     from_port  = var.public_nacl_ingress["from_port"]
-#     to_port    = var.public_nacl_ingress["to_port"]
-#   }
-
-#   tags = {
-#     Name = "${var.vpc_name}-public-nacl"
-#     env  = var.env
-#   }
-# }
-
 # Elastic IP for NAT Gateway
 resource "aws_eip" "nat_eip" {}
 
@@ -82,7 +54,7 @@ resource "aws_route_table" "public_route_table" {
   tags = {
     Name = "${var.vpc_name}-route-table-public"
     env  = var.env
-  } 
+  }
 }
 
 # Route Table Association to Public subnet
@@ -116,7 +88,7 @@ resource "aws_route_table" "private_route_table" {
   tags = {
     Name = "${var.vpc_name}-route-table-private"
     env  = var.env
-  } 
+  }
 }
 
 # Route Table Association to private subnet

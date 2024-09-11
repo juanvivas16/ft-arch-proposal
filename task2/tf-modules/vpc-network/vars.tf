@@ -50,13 +50,3 @@ variable "enable_dns_hostnames" {
   type        = bool
   default     = true
 }
-
-variable "public_nacl_ingress" {
-  description = "Network ACL ingress rules"
-  type = map(string)
-}
-
-variable "public_nacl_egress" {
-  description = "Network ACL egress rules"
-  type = map(string)
-}

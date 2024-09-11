@@ -53,9 +53,9 @@ This repository contains all the Terraform modules and configurations required t
       - [**Objective**: Verify that static assets are correctly stored in the S3 bucket and accessible publicly in read-only mode.](#objective-verify-that-static-assets-are-correctly-stored-in-the-s3-bucket-and-accessible-publicly-in-read-only-mode)
       - [Expected Outcome:](#expected-outcome-3)
       - [Verification:](#verification-3)
+    - [6. Running TFsec to Check Security Compliance in Our Code](#6-running-tfsec-to-check-security-compliance-in-our-code)
     - [5. Troubleshooting Tips](#5-troubleshooting-tips)
 
----
 
 ## Modules Overview
 
@@ -88,7 +88,6 @@ This repository contains all the Terraform modules and configurations required t
    - Purpose: Configures security groups to control access between different resources like ALB, EC2, and RDS.
    - [Module](tf-modules/seg/README.md)
 
----
 
 
 
@@ -137,7 +136,6 @@ You can create an IAM policy with the following permissions:
 }
 ```
 
----
 
 ### 3. Environment Vars
 
@@ -146,12 +144,25 @@ To ensure Terraform can manage your infrastructure correctly, you need to define
 #### Example `.env` File:
 
 ```bash
+#Set env
 ENV=stg
+
+#AWS config vars
 AWS_ACCESS_KEY_ID=xxxxx
 AWS_SECRET_ACCESS_KEY=xxxxx
 AWS_DEFAULT_REGION=us-east-1
+
+#Tf vars
+TF_VAR_rds_db_username=xxxxx
+TF_VAR_rds_db_password=xxxxx
 TF_VAR_local_public_ip=x.x.x.x/32
-TF_VAR_ssh_public_key=xxxxx
+TF_VAR_ssh_public_key="ssh-rsa xxxxx"
+
+#Test vars
+NUM_REQUESTS=10000
+NUM_CONCURRENT=50
+NUM_CURL_REQUESTS=20
+
 ```
 
 ##### Explanation of the Variables:
@@ -162,8 +173,9 @@ TF_VAR_ssh_public_key=xxxxx
 - **AWS_DEFAULT_REGION**: The AWS region where the infrastructure will be deployed (e.g., `us-east-1`).
 - **TF_VAR_local_public_ip**: Your local machine's public IP address, used for whitelisting in security groups.
 - **TF_VAR_ssh_public_key**: The SSH public key used to access EC2 instances.
+- **TF_VAR_rds_db_username**: RDS admin username.
+- **TF_VAR_rds_db_password**: RDS admin password.
 
----
 
 ## How to Deploy, Update, and Destroy the Infrastructure
 
@@ -204,7 +216,7 @@ Terraform will show you the planned infrastructure changes and proceed with the 
 
 ### 2. Update the Infrastructure
 
-If you need to update the infrastructure (e.g., change the number of instances in the ASG or modify security group rules):
+If you need to update the infrastructure (e.g., change the number of instances in the ASG or modify security group rules or delete a resource):
 
 #### a. Make the Necessary Changes
 
@@ -253,8 +265,7 @@ Modify `ENV` variables in `.env` as needed (e.g.,  stg, prod, etc.) to distingui
 #### d. Deploy the New Environment
 
 Follow the deployment steps (`make init` and `make apply`).
-
---- 
+ 
 
 ## Testing Plan for Infrastructure Setup
 
@@ -281,7 +292,6 @@ make test
 #### Verification:
 - Use **CloudWatch** metrics to observe scaling activities.
 - Check the **EC2 Instances** in the ASG to ensure they are increasing or decreasing as the load fluctuates.
----
 
 ### 2. Verifying that the ALB Distributes Traffic Across Instances
 #### **Objective**: Ensure the ALB is correctly distributing incoming traffic across the available EC2 instances.
@@ -297,7 +307,6 @@ make test
 - Check the output of the test script to ensure that each EC2 instance hostname is different, confirming traffic distribution.
 - Use the **AWS Console** or **CloudWatch** to verify that traffic is being routed to multiple targets within the **ALB Target Group**.
 
----
 
 ### 3. Checking that the RDS Instance Is Accessible from EC2 but Not from the Internet
 
@@ -328,7 +337,6 @@ make test
 - Ensure successful connections to the RDS instance from EC2 instances.
 - Verify failed connections from any external or public machine, ensuring the RDS instance is secure and not exposed to the internet.
 
----
 
 ### 4. Ensuring Static Assets Are Correctly Stored and Accessible from the S3 Bucket
 
@@ -361,7 +369,19 @@ make test
 - Ensure that files can be read from the S3 bucket publicly.
 - Test actions such as file deletion or modification from a public endpoint, which should be denied.
 
----
+### 6. Running TFsec to Check Security Compliance in Our Code
+
+[Tfsec](https://github.com/aquasecurity/tfsec) is a tool that allows us to validate the security measures in our Infrastructure as Code (IaC). I have implemented a small test in our automation pipeline to check the security status of our code.
+
+To run the test, simply execute the following command:
+
+```bash
+make sec
+```
+
+This will output the security status of our code and highlight any potential improvements we should make to ensure continuous compliance with best security practices.
+
+
 ### 5. Troubleshooting Tips
 - Communication issue with ALB: You should verify that the health check of the ASG is functioning correctly. To do this, check the routing rules, security groups, etc.
 - Instances unavailable or invalid: You can try changing the instance type you are using from EC2 or RDS to another one. Otherwise, you may need to wait for AWS to increase your quota before trying again.

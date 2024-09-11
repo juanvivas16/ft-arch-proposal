@@ -18,6 +18,11 @@ resource "aws_vpc_security_group_ingress_rule" "ingress_rule" {
   ip_protocol                  = each.value.ip_protocol
   cidr_ipv4                    = each.value.cidr_ipv4 != "" ? each.value.cidr_ipv4 : null
   referenced_security_group_id = each.value.referenced_security_group_id != "" ? each.value.referenced_security_group_id : null
+
+  tags = {
+    Name = "${var.sg_name}-ingress-rule-${each.key}"
+    env  = var.env
+  }
 }
 
 resource "aws_vpc_security_group_egress_rule" "egress_rule" {
@@ -28,4 +33,9 @@ resource "aws_vpc_security_group_egress_rule" "egress_rule" {
   to_port           = each.value.ip_protocol != "-1" ? each.value.to_port : null
   ip_protocol       = each.value.ip_protocol
   cidr_ipv4         = each.value.cidr_ipv4
+
+  tags = {
+    Name = "${var.sg_name}-egress-rule-${each.key}"
+    env  = var.env
+  }
 }

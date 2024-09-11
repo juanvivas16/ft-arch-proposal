@@ -28,6 +28,10 @@ destroy:
 test:
 	$(DCOMPOSE) run --rm --remove-orphans tf test
 
+# Test Terraform infrastructure security
+sec:
+	$(DCOMPOSE) run --rm --remove-orphans tf sec
+
 # Stop and clean up orphan containers or unused resources
 clean:
 	$(DCOMPOSE) down --remove-orphans

@@ -7,8 +7,6 @@ module "vpc" {
   enable_dns_hostnames = var.vpc_enable_dns_hostnames
   public_subnets       = var.vpc_public_subnets
   private_subnets      = var.vpc_private_subnets
-  public_nacl_ingress  = var.public_nacl_ingress
-  public_nacl_egress   = var.public_nacl_egress
   env                  = var.env
 }
 
