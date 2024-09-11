@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ $# -eq 0 ]; then
   echo "No command provided. Exiting..."
@@ -34,13 +34,14 @@ case $command in
     "destroy")
         cd "$base_path" && terraform destroy -auto-approve
         ;;
+    "output")
+        cd "$base_path" && terraform output
+        ;;
     "sec")
         cd "$base_path" && tfsec .
         ;;
     "test")
-        mv test.sh "$base_path"
-        cd "$base_path" && ./test.sh
-        rm "$base_path"/test.sh
+        ./test.sh
         ;;
     *)
         echo "Invalid command. Available commands: init, validate, plan, apply, destroy, test, sec."

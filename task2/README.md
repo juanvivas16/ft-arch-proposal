@@ -139,7 +139,7 @@ You can create an IAM policy with the following permissions:
 
 ### 3. Environment Vars
 
-To ensure Terraform can manage your infrastructure correctly, you need to define some environment variables in a `.env` file.
+To ensure Terraform manages your infrastructure correctly, you must define certain environment variables in a .env file. This file will be used by Docker Compose to load all necessary environment variables, ensuring proper functionality of the automation.
 
 #### Example `.env` File:
 
@@ -173,16 +173,17 @@ NUM_CURL_REQUESTS=20
 - **AWS_DEFAULT_REGION**: The AWS region where the infrastructure will be deployed (e.g., `us-east-1`).
 - **TF_VAR_local_public_ip**: Your local machine's public IP address, used for whitelisting in security groups.
 - **TF_VAR_ssh_public_key**: The SSH public key used to access EC2 instances.
-- **TF_VAR_rds_db_username**: RDS admin username.
-- **TF_VAR_rds_db_password**: RDS admin password.
-
+- **TF_VAR_rds_db_username**: Username for the RDS database administrator.
+- **TF_VAR_rds_db_password**: Password for the RDS database administrator.
+- **NUM_REQUESTS**: Number of requests sent to the ALB.
+- **NUM_CONCURRENT**: Number of concurrent workers sending requests to the ALB.
+- **NUM_CURL_REQUESTS**: Number of requests used to verify load balancing.
 
 ## How to Deploy, Update, and Destroy the Infrastructure
 
-To simplify the infrastructure creation process with Terraform, i created a small automation using Docker. This setup allows for easy management of environments while securely maintaining AWS credentials, SSH keys, and personal IP addresses.
+To simplify the infrastructure creation process with Terraform, i created a small automation using Docker. This setup allows for easy management of environments while securely maintaining AWS credentials, SSH keys, DB user&pass and personal IP addresses.
 
 ### 1. Deploy the Infrastructure
-
 
 #### a. Setting Environment
 

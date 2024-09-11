@@ -1,8 +1,9 @@
-FROM alpine
+FROM ubuntu
 
 ARG TF_VERSION
 
-RUN apk add --no-cache curl aws-cli unzip apache2-utils
+RUN apt update -y && apt full-upgrade -y && apt install curl unzip apache2-utils -y
+RUN apt clean &&rm -rf /var/lib/apt/lists/*
 
 RUN curl -fsSL https://releases.hashicorp.com/terraform/${TF_VERSION}/terraform_${TF_VERSION}_linux_amd64.zip -o terraform.zip \
     && unzip terraform.zip \
@@ -16,13 +17,12 @@ RUN curl -fsSL https://github.com/aquasecurity/tfsec/releases/latest/download/tf
     && chmod +x /usr/local/bin/tfsec
 
 RUN mkdir /app
+WORKDIR /app
 
 ADD entrypoint.sh /app/entrypoint.sh
 RUN chmod +x /app/entrypoint.sh
 
-ADD simple-load-test.sh /app/test.sh
+ADD test.sh /app/test.sh
 RUN chmod +x /app/test.sh
-
-WORKDIR /app
 
 ENTRYPOINT ["/app/entrypoint.sh"]

@@ -24,6 +24,11 @@ apply:
 destroy:
 	$(DCOMPOSE) run --rm --remove-orphans tf destroy -auto-approve
 
+
+output:
+	$(DCOMPOSE) run --rm --remove-orphans tf output
+
+
 # Test Terraform infrastructure scalability and load balacing
 test:
 	$(DCOMPOSE) run --rm --remove-orphans tf test
