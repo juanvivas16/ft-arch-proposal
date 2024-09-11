@@ -1,23 +1,33 @@
-# Construir la imagen
+DCOMPOSE=docker compose
+
+# Build the Docker image
 build:
-	docker compose build
+	$(DCOMPOSE) build
 
-# Inicializar Terraform
+# Initialize Terraform
 init:
-	docker compose run --rm --remove-orphans tf init 
+	$(DCOMPOSE) run --rm --remove-orphans tf init 
 
-# Planificar la infraestructura
+# Validate Terraform configuration
 validate:
-	docker compose run --rm --remove-orphans tf validate 
+	$(DCOMPOSE) run --rm --remove-orphans tf validate 
 
-# Planificar la infraestructura
+# Plan Terraform infrastructure
 plan:
-	docker compose run --rm --remove-orphans tf plan 
+	$(DCOMPOSE) run --rm --remove-orphans tf plan 
 
-# Aplicar la infraestructura
+# Apply Terraform infrastructure changes
 apply:
-	docker compose run --rm --remove-orphans tf apply -auto-approve
+	$(DCOMPOSE) run --rm --remove-orphans tf apply -auto-approve
 
-# Destruir la infraestructura
+# Destroy Terraform infrastructure
 destroy:
-	docker compose run --rm --remove-orphans tf destroy -auto-approve
+	$(DCOMPOSE) run --rm --remove-orphans tf destroy -auto-approve
+
+# Test Terraform infrastructure scalability and load balacing
+test:
+	$(DCOMPOSE) run --rm --remove-orphans tf test
+
+# Stop and clean up orphan containers or unused resources
+clean:
+	$(DCOMPOSE) down --remove-orphans

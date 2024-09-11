@@ -1,0 +1,10 @@
+http:
+  http://$ALB_DNS:
+    status: 200
+    timeout: 5000
+    no_redirects: true
+    body:
+      - "Welcome" #Validate if word "Welcome" is in the body
+    headers:
+      Content-Type:
+        - 'text/html'

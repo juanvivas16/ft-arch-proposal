@@ -1,11 +1,11 @@
 services:
   tf:
+    platform: linux/amd64
     build:
       dockerfile: Dockerfile
       context: .
       args:
         TF_VERSION: '1.9.5'
-    entrypoint: "/app/entrypoint.sh"
     env_file:
       - .env
     volumes:
