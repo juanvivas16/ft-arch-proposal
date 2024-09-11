@@ -1,2 +1,5 @@
 tech-interview.pdf
 .DS_Store
+task2/.env
+task2/tf-code/*/.terraform
+task2/tf-code/*/.terraform.lock.hcl

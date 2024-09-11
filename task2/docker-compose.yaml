@@ -1,0 +1,18 @@
+services:
+  tf:
+    build:
+      dockerfile: Dockerfile
+      context: .
+      args:
+        TF_VERSION: '1.9.5'
+    entrypoint: "/app/entrypoint.sh"
+    env_file:
+      - .env
+    volumes:
+      - ./tf-code:/app/tf-code
+      - ./tf-modules:/app/tf-modules
+      - tf-state:/app/tf-state
+
+volumes:
+  tf-state:
+    driver: local
