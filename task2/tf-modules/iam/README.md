@@ -26,9 +26,9 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_assume_role_policy"></a> [assume\_role\_policy](#input\_assume\_role\_policy) | The role policy variables | <pre>object({<br>    Version = string<br>    Statement = list(object({<br>      Action = string<br>      Effect = string<br>      Principal = object({<br>        Service = string<br>      })<br>    }))<br>  })</pre> | n/a | yes |
+| <a name="input_env"></a> [env](#input\_env) | Environment | `string` | `"stg"` | no |
 | <a name="input_policy"></a> [policy](#input\_policy) | Policy definition por iam role | <pre>object({<br>    Version = string<br>    Statement = list(object({<br>      Effect   = string<br>      Action   = list(string)<br>      Resource = list(string)<br>    }))<br>  })</pre> | n/a | yes |
 | <a name="input_role_name"></a> [role\_name](#input\_role\_name) | The name of the IAM role | `string` | n/a | yes |
-| <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to add to all resources | `map(string)` | n/a | yes |
 
 ## Outputs
 

@@ -1,7 +1,8 @@
 module "ssh_key" {
-  source              = "../../tf-modules/ssh-key"
-  key_name            = var.key_name
+  source         = "../../tf-modules/ssh-key"
+  key_name       = var.key_name
   ssh_public_key = var.ssh_public_key
+  env            = var.env
 }
 
 module "ec2_asg" {

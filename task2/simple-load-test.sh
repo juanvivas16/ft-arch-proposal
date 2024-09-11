@@ -3,7 +3,7 @@
 # Check if the required environment variables are set
 if [ -z "$NUM_REQUESTS" ] || [ -z "$NUM_CONCURRENT" ]; then
   echo "Error: NUM_REQUESTS and NUM_CONCURRENT environment variables must be set."
-  echo "Usage: NUM_REQUESTS=<number_of_requests> NUM_CONCURRENT=<number_of_concurrent_requests> ./load_test.sh"
+  echo "Usage: NUM_REQUESTS=<number_of_requests> NUM_CONCURRENT=<number_of_concurrent_requests> ./test.sh"
   exit 1
 fi
 
@@ -28,6 +28,7 @@ echo "Load test completed on $ALB_DNS"
 
 # Perform the curl requests n times, where n is NUM_CURL_REQUESTS
 echo "Performing $NUM_CURL_REQUESTS curl requests to the ALB: $ALB_DNS to check Load Balacing is working correctly"
+
 for ((i=1; i<=NUM_CURL_REQUESTS; i++)); do
   echo "Curl request #$i to http://$ALB_DNS/"
   curl http://$ALB_DNS/

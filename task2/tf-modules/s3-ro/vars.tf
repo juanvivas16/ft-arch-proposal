@@ -3,7 +3,8 @@ variable "bucket_name" {
   type        = string
 }
 
-variable "environment" {
-  description = "The environment for the bucket (e.g., dev, prod)"
+variable "env" {
+  description = "Environment"
   type        = string
+  default     = "stg"
 }

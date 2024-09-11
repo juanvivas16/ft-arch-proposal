@@ -15,10 +15,10 @@ RUN curl -fsSL https://github.com/goss-org/goss/releases/latest/download/goss-li
 RUN mkdir /app
 
 ADD entrypoint.sh /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
 
 ADD simple-load-test.sh /app/test.sh
-
-RUN chmod +x /app/entrypoint.sh
+RUN chmod +x /app/test.sh
 
 WORKDIR /app
 

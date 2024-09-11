@@ -7,14 +7,12 @@ variable "rds_db_name" {
 variable "rds_db_username" {
   description = "The username for the RDS database"
   type        = string
-  default     = "tfdbuser"
 }
 
 variable "rds_db_password" {
   description = "The password for the RDS database"
   type        = string
   sensitive   = true
-  default     = "K24Y4i3XQFd6Rd8gJn7C78XuFp7UlbTF"
 }
 
 variable "rds_db_engine" {

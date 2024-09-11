@@ -15,12 +15,7 @@ module "rds" {
   skip_final_snapshot     = var.rds_skip_final_snapshot
   private_subnet_ids      = module.vpc.private_subnets_ids
   security_group_id       = module.rds_sg.id
-
-  tags = {
-    "env"    = var.env
-    "name"   = var.rds_db_name
-    "engine" = var.rds_db_engine
-  }
+  env                     = var.env
 }
 
 output "rds_endpoint" {

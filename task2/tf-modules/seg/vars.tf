@@ -33,3 +33,9 @@ variable "egress_rules" {
     cidr_ipv4   = string
   }))
 }
+
+variable "env" {
+  description = "Environment"
+  type        = string
+  default     = "stg"
+}

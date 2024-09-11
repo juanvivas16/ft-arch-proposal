@@ -29,11 +29,6 @@ variable "is_internal" {
   default     = false
 }
 
-variable "tags" {
-  description = "A map of tags to add to all resources"
-  type        = map(string)
-}
-
 variable "health_check_path" {
   description = "Health check path"
   type        = string
@@ -44,4 +39,8 @@ variable "load_balancing_cross_zone_enabled" {
   default     = false
 }
 
-
+variable "env" {
+  description = "Environment"
+  type        = string
+  default     = "stg"
+}

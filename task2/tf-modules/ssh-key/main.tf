@@ -3,6 +3,7 @@ resource "aws_key_pair" "key_pair" {
   public_key = var.ssh_public_key
 
   tags = {
-    name = var.key_name
+    Name = var.key_name
+    env  = var.env
   }
 }

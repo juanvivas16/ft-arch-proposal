@@ -9,7 +9,7 @@ module "alb" {
   is_internal                       = var.alb_is_internal
   health_check_path                 = var.alb_health_check_path
   load_balancing_cross_zone_enabled = var.alb_load_balancing_cross_zone_enabled
-  tags                              = var.alb_tags
+  env                               = var.env
 }
 
 output "alb_dns_name" {

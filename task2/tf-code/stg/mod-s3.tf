@@ -2,7 +2,7 @@ module "s3_prive_bucket" {
   source = "../../tf-modules/s3-ro"
 
   bucket_name = var.s3_bucket_name
-  environment = var.env
+  env         = var.env
 }
 
 output "s3_domain_name" {

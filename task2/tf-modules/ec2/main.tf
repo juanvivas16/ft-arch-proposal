@@ -45,7 +45,7 @@ resource "aws_autoscaling_group" "ec2_asg" {
   enabled_metrics     = var.enabled_metrics
 
   tag {
-    key                 = "name"
+    key                 = "Name"
     value               = var.instance_name
     propagate_at_launch = true
   }

@@ -7,3 +7,9 @@ variable "key_name" {
   description = "The name of the key pair"
   type        = string  
 }
+
+variable "env" {
+  description = "Environment"
+  type        = string
+  default     = "stg"
+}

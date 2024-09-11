@@ -29,7 +29,8 @@ variable "policy" {
   })
 }
 
-variable "tags" {
-  description = "A map of tags to add to all resources"
-  type        = map(string)
+variable "env" {
+  description = "Environment"
+  type        = string
+  default     = "stg"
 }

@@ -27,13 +27,3 @@ variable "alb_load_balancing_cross_zone_enabled" {
   type        = bool
   default     = false
 }
-
-variable "alb_tags" {
-  description = "Tags to apply to the ALB"
-  type        = map(any)
-  default = {
-    "alb_name" = "tf-ft-alb"
-    "env"      = "stg"
-  }
-
-}

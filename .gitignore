@@ -3,3 +3,4 @@ tech-interview.pdf
 task2/.env
 task2/tf-code/*/.terraform
 task2/tf-code/*/.terraform.lock.hcl
+task2/tf-code/stg/test.sh

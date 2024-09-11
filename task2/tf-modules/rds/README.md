@@ -30,6 +30,7 @@ No modules.
 | <a name="input_db_name"></a> [db\_name](#input\_db\_name) | The name of the database | `string` | n/a | yes |
 | <a name="input_db_password"></a> [db\_password](#input\_db\_password) | The master password for the database | `string` | n/a | yes |
 | <a name="input_db_username"></a> [db\_username](#input\_db\_username) | The master username for the database | `string` | `"admin"` | no |
+| <a name="input_env"></a> [env](#input\_env) | Environment | `string` | `"stg"` | no |
 | <a name="input_instance_class"></a> [instance\_class](#input\_instance\_class) | The instance class for the RDS instance | `string` | `"db.t3.micro"` | no |
 | <a name="input_multi_az"></a> [multi\_az](#input\_multi\_az) | Enable multi-az deployment | `bool` | n/a | yes |
 | <a name="input_parameter_group_name"></a> [parameter\_group\_name](#input\_parameter\_group\_name) | DB parameter group name | `string` | `"default.postgres16"` | no |
@@ -38,7 +39,6 @@ No modules.
 | <a name="input_security_group_id"></a> [security\_group\_id](#input\_security\_group\_id) | The security group ID for the RDS instance | `string` | n/a | yes |
 | <a name="input_skip_final_snapshot"></a> [skip\_final\_snapshot](#input\_skip\_final\_snapshot) | Skip final snapshot creation | `bool` | n/a | yes |
 | <a name="input_storage_encrypted"></a> [storage\_encrypted](#input\_storage\_encrypted) | Enable DB encryption | `bool` | n/a | yes |
-| <a name="input_tags"></a> [tags](#input\_tags) | RDS instance tags | `map(string)` | n/a | yes |
 
 ## Outputs
 

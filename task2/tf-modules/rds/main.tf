@@ -3,7 +3,10 @@ resource "aws_db_subnet_group" "rds_subnet_group" {
   name       = "${var.db_name}-subnet-group"
   subnet_ids = var.private_subnet_ids
 
-  tags = var.tags
+  tags = {
+    Name = "${var.db_name}-subnet-group"
+    env  = var.env
+  }
 }
 
 # RDS Instance with Multi-AZ support
@@ -24,5 +27,9 @@ resource "aws_db_instance" "rds" {
   db_subnet_group_name    = aws_db_subnet_group.rds_subnet_group.name
   vpc_security_group_ids  = [var.security_group_id]
 
-  tags = var.tags
+  tags = {
+    Name   = var.db_name
+    env    = var.env
+    engine = var.db_engine
+  }
 }

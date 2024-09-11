@@ -37,7 +37,14 @@ module "ec2_sg" {
       ip_protocol                  = var.sg_ec2_ingress_ssh_rules["ip_protocol"]
       cidr_ipv4                    = var.local_public_ip
       referenced_security_group_id = ""
-    }
+    },
+    internal = {
+      from_port                    = 0
+      to_port                      = 0
+      ip_protocol                  = "tcp"
+      cidr_ipv4                    = ""
+      referenced_security_group_id = module.ec2_sg.id
+    },
   }
 }
 

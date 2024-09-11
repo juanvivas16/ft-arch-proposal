@@ -3,6 +3,7 @@ module "iam_ec2" {
 
   role_name          = var.iam_role_name
   assume_role_policy = var.iam_assume_role_policy
+  env                = var.env
 
   policy = {
     Version = "2012-10-17"
@@ -29,10 +30,5 @@ module "iam_ec2" {
         Resource = ["*"]
       }
     ]
-  }
-
-  tags = {
-    name = var.iam_role_name
-    env  = var.env
   }
 }

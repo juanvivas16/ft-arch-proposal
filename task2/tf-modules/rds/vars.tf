@@ -42,11 +42,6 @@ variable "security_group_id" {
   type        = string
 }
 
-variable "tags" {
-  description = "RDS instance tags"
-  type        = map(string)
-}
-
 variable "db_engine" {
   description = "The database engine to use"
   type        = string
@@ -84,3 +79,9 @@ variable "skip_final_snapshot" {
   description = "Skip final snapshot creation"
   type = bool
 } 
+
+variable "env" {
+  description = "Environment"
+  type        = string
+  default     = "stg"
+}

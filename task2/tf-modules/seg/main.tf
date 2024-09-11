@@ -5,6 +5,7 @@ resource "aws_security_group" "sg" {
 
   tags = {
     Name = var.sg_name
+    env  = var.env
   }
 }
 

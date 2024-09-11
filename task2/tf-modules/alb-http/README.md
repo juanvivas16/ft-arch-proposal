@@ -27,11 +27,11 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_alb_name"></a> [alb\_name](#input\_alb\_name) | The name of the ALB | `string` | n/a | yes |
 | <a name="input_alb_security_group_id"></a> [alb\_security\_group\_id](#input\_alb\_security\_group\_id) | Security Group ID for the ALB | `list(string)` | n/a | yes |
+| <a name="input_env"></a> [env](#input\_env) | Environment | `string` | `"stg"` | no |
 | <a name="input_health_check_path"></a> [health\_check\_path](#input\_health\_check\_path) | Health check path | `string` | n/a | yes |
 | <a name="input_is_internal"></a> [is\_internal](#input\_is\_internal) | Whether the ALB is internal or not | `bool` | `false` | no |
 | <a name="input_load_balancing_cross_zone_enabled"></a> [load\_balancing\_cross\_zone\_enabled](#input\_load\_balancing\_cross\_zone\_enabled) | Enable cross zone load balancing | `bool` | `false` | no |
 | <a name="input_public_subnets_ids"></a> [public\_subnets\_ids](#input\_public\_subnets\_ids) | List of public subnet IDs where the ALB will be launched | `list(string)` | n/a | yes |
-| <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to add to all resources | `map(string)` | n/a | yes |
 | <a name="input_target_group_name"></a> [target\_group\_name](#input\_target\_group\_name) | The name of the target group for the ALB | `string` | n/a | yes |
 | <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | The ID of the VPC where the ALB will be launched | `string` | n/a | yes |
 
