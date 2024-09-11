@@ -1,9 +1,8 @@
-# Task1
+# Task1: High-Level Architecture
 
 ## Table of Contents
-- [Task1](#task1)
+- [Task1: High-Level Architecture](#task1-high-level-architecture)
   - [Table of Contents](#table-of-contents)
-  - [Task 1: High-Level Architecture](#task-1-high-level-architecture)
     - [1. High-Level Architecture Diagram](#1-high-level-architecture-diagram)
       - [Explanation of Components:](#explanation-of-components)
       - [Cost-Effectiveness Contributions:](#cost-effectiveness-contributions)
@@ -18,8 +17,6 @@
       - [Balance of Security and Cost-Effectiveness:](#balance-of-security-and-cost-effectiveness)
 
 ---
-
-## Task 1: High-Level Architecture
 
 ### 1. High-Level Architecture Diagram
 
