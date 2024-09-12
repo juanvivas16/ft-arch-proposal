@@ -19,8 +19,6 @@ Additionally, serverless technologies have never been my strong suit. Most of my
 
 ## Future improvements for this challenge
 
-A list of improvements I plan to make includes:
-
 - Creating more comprehensive test cases for the infrastructure using tools like **Goss** to ensure all components are functioning as expected.
 - Expanding my AWS knowledge to develop more detailed and efficient architectural diagrams, with a stronger focus on cloud resources, cost optimization, and overall efficiency.
 - Revisiting task 1 with a proposal that incorporates Kubernetes, Prometheus, Grafana, OpenTelemetry, managed databases on EC2, service mesh, WAF, and other advanced cloud technologies.

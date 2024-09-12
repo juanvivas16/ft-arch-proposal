@@ -95,9 +95,10 @@ This section outlines the Terraform modules and configurations necessary to depl
 
 ### 1. Prerequisites
 
-- **Docker**: Ensure you have [Docker installed](https://docs.docker.com/engine/install/).
-- **Docker Compose**: Ensure you have [Docker  compose installed](https://docs.docker.com/compose/).
-- **AWS IAM User with the Necessary Permissions**: As outlined in the IAM policy section, ensure the user running Terraform has the necessary permissions.
+- **Docker**: Make sure [Docker is installed](https://docs.docker.com/engine/install/).
+- **Docker Compose**: Ensure [Docker Compose is installed](https://docs.docker.com/compose/).
+- **Make**: Make is required to execute all commands in this project.
+- **AWS IAM User with Required Permissions**: Ensure the IAM user running Terraform has the necessary permissions, as outlined in the IAM policy section.
 
 ### 2. Permissions for the Terraform User
 
