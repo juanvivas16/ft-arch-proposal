@@ -3,6 +3,12 @@ variable "bucket_name" {
   type        = string
 }
 
+variable "force_destroy" {
+  description = "Whether to force destroy the S3 bucket"
+  type        = bool
+  default     = false
+}
+
 variable "env" {
   description = "Environment"
   type        = string

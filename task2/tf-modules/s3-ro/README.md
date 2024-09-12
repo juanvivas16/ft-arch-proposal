@@ -29,7 +29,8 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_bucket_name"></a> [bucket\_name](#input\_bucket\_name) | The name of the S3 bucket | `string` | n/a | yes |
-| <a name="input_environment"></a> [environment](#input\_environment) | The environment for the bucket (e.g., dev, prod) | `string` | n/a | yes |
+| <a name="input_env"></a> [env](#input\_env) | Environment | `string` | `"stg"` | no |
+| <a name="input_force_destroy"></a> [force\_destroy](#input\_force\_destroy) | Whether to force destroy the S3 bucket | `bool` | `false` | no |
 
 ## Outputs
 

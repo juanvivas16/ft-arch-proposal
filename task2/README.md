@@ -1,6 +1,6 @@
 # Task 2: Automated Infrastructure with Terraform
 
-This repository contains all the Terraform modules and configurations required to deploy a highly available and cost-effective infrastructure on AWS. The infrastructure includes a VPC, subnets, EC2 instances, an ALB, an RDS database, security groups, and an S3 bucket.
+This section outlines the Terraform modules and configurations necessary to deploy and test a scalable, highly available, and cost-effective infrastructure on AWS. By leveraging Infrastructure as Code (IaC), we automate the provisioning of key resources such as VPCs, subnets, EC2 instances, an Application Load Balancer (ALB), an RDS PostgreSQL database, security groups, and an S3 bucket for static content hosting. This approach ensures consistent, repeatable deployments while optimizing for security, availability, and cost efficiency.
 
 ## Table of Contents
 - [Task 2: Automated Infrastructure with Terraform](#task-2-automated-infrastructure-with-terraform)
@@ -63,9 +63,9 @@ This repository contains all the Terraform modules and configurations required t
    - Purpose: Creates a VPC, along with public and private subnets, routing tables, an Internet Gateway, and a NAT Gateway.
    - [Module](tf-modules/vpc-network/README.md)
 
-
 ### 2. EC2 Auto Scaling Group (ASG) Module
-   - Purpose: Launches an EC2 Auto Scaling Group that scales based on CPU utilization. The instances are placed in the public subnets and serve traffic via an ALB.
+   - Purpose: Launches an EC2 Auto Scaling Group that scales based on CPU utilization. The instances are placed in the public subnets and serve traffic via an ALB. 
+   - **Important**: We configured a small [script](tf-code/stg/files/ec2_user_data.sh) in the user_data so that the instances would launch an Nginx server, allowing us to evaluate load balancing through the hostname and expose the /health endpoint to use in the target group health checks.
    - [Module](tf-modules/ec2/README.md)
 
 ### 3. Application Load Balancer (ALB) Module
@@ -388,3 +388,4 @@ This will output the security status of our code and highlight any potential imp
 - Instances unavailable or invalid: You can try changing the instance type you are using from EC2 or RDS to another one. Otherwise, you may need to wait for AWS to increase your quota before trying again.
 - Permission errors when creating a resource: Check the role and permissions assigned to the Terraform user, and gradually escalate permissions until you find the one needed.
 - Invalid SSH access to instances: Ensure that your SSH key is correct and has been added to your computer.
+- If you want to destroy the S3 bucket, you must ensure that it doesn't have any stored or versioned content. In case it does contain content, you must first set the variable `s3_force_destroy=true` and apply the change before proceeding to destroy it.

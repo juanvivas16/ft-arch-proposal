@@ -1,21 +1,28 @@
-### Decisions made in the design, challenges encountered, and potential future improvements for this challenge.
+# Decisions made in the design, challenges encountered, and potential future improvements for this challenge.
 
 ## Decisions made in the design
-The designs were based on the two frontend approaches I have seen most commonly used in my experience: SSR (Server-Side Rendering) and SPA (Single Page Application). The goal was always to create a robust but simple design that is scalable, secure, and above all, cost-effective.
+The designs were inspired by two frontend approaches that I have most commonly encountered in my experience: Server-Side Rendering (SSR) and Single Page Applications (SPA). The goal was to create a design that is not only robust but also scalable, secure, and, above all, cost-effective.
 
-In my opinion, there are always opportunities to improve cost and security by looking beyond the cloud provider's native tools. For more complex architectures involving many services, one could consider using Kubernetes, which offers scalability, security, and high availability. Likewise, managed databases (those installed on a VM and configured by us through Ansible, for example) could also be considered, assuming the additional management cost, which is not always low.
+In my view, there are always opportunities to optimize both cost and security by exploring solutions beyond the native tools provided by cloud platforms. For architectures that involve more complex services, Kubernetes is a strong option, offering scalability, security, and high availability. Additionally, managed databases—whether provisioned by the cloud provider or installed on virtual machines and configured by tools like Ansible—can be considered. However, this comes with additional management overhead, which may not always be cost-effective.
+
+For any architecture, balancing the benefits of managed services versus custom implementations is key to maintaining control over both cost and operational complexity. Choosing the right approach depends on the specific needs of the project and the available resources.
 
 ## Challenges encountered
-The biggest challenge was researching and understanding the available resources in AWS since I have had very little experience with this cloud provider. While the logic and resources between clouds are quite similar, there are always configurations, resource types, and security rules that need to be mastered. It has truly been a great challenge for me to design and build everything outlined in this project.
 
-Additionally, constructing all of this in English added another layer of excitement and difficulty to the challenge (with a little help from AI, of course :D).
+The biggest challenge for me was researching and understanding the available AWS resources, as I had limited experience with this cloud provider. While the underlying logic and resources across different clouds are quite similar, each provider has its own specific configurations, resource types, and security rules that must be mastered. Designing and building everything outlined in this project has truly tested my abilities.
 
-Understanding how networking concepts work in AWS was another major challenge since this is essential for securely connecting everything I have built for the project. I don’t fully master it yet, but I hope to get there soon!
+Another layer of complexity was added by constructing the entire project in English, which, while exciting, made the challenge even more demanding (with a little help from AI, of course :D).
 
-Serverless has never been my strong suit in general, as my experience in the cloud world has mostly been with Kubernetes. This experience has led me to think about cost optimization more at the node and workload resource level. In my professional journey, I have also had the advantage of working on projects with sufficient resources to create all the necessary infrastructure. I consider improving my knowledge in serverless and FinOps to be a key area for growth in my career.
+Networking in AWS was another significant hurdle, as understanding how these concepts work is essential for securely connecting all the components of the project. Although I haven’t fully mastered it yet, I am confident that I’ll improve as I continue learning.
+
+Additionally, serverless technologies have never been my strong suit. Most of my cloud experience has been with Kubernetes, where cost optimization is focused more on node-level and resource allocation for workloads. In my career, I’ve been fortunate to work on projects with enough resources to build all the necessary infrastructure. I now see expanding my knowledge of serverless and FinOps as crucial areas for growth in my professional development.
 
 ## Future improvements for this challenge
+
 A list of improvements I plan to make includes:
-- Creating better test cases for the infrastructure, using tools like **Goss**, for example.
-- Enhancing my AWS knowledge to propose more in-depth diagrams with a better understanding of cloud resources, costs, and efficiency.
-- Reworking task 1 with a proposal that includes Kubernetes, Prometheus, Grafana, OpenTelemetry, managed databases on EC2, service mesh, WAF, etc.
+
+- Creating more comprehensive test cases for the infrastructure using tools like **Goss** to ensure all components are functioning as expected.
+- Expanding my AWS knowledge to develop more detailed and efficient architectural diagrams, with a stronger focus on cloud resources, cost optimization, and overall efficiency.
+- Revisiting task 1 with a proposal that incorporates Kubernetes, Prometheus, Grafana, OpenTelemetry, managed databases on EC2, service mesh, WAF, and other advanced cloud technologies.
+- Enhancing the security of the infrastructure by enabling TLS for all traffic through the load balancer, securing the S3 bucket with encryption, enabling HTTPS on the Nginx server managing requests on EC2 instances, and implementing more granular network access controls using ACLs.
+

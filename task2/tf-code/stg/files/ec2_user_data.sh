@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 sudo apt update -y
 sudo apt install nginx -y
@@ -6,10 +7,10 @@ sudo apt install nginx -y
 sudo systemctl enable nginx
 sudo systemctl start nginx
 
-# Obtener el hostname de la instancia
+# Get the hostname of the instance
 HOSTNAME=$(hostname)
 
-# Crear el archivo index.html con el hostname
+# Create the index.html file with the hostname
 echo "<html>
 <head>
   <title>EC2 Instance</title>
@@ -19,7 +20,7 @@ echo "<html>
 </body>
 </html>" | sudo tee /var/www/html/index.html
 
-# Crear un archivo para el health check en Nginx
+# Create a file for the load balancer health check in Nginx
 echo "server {
     listen 80;
     server_name localhost;
@@ -36,5 +37,5 @@ echo "server {
     }
 }" | sudo tee /etc/nginx/sites-available/default
 
-# Reiniciar Nginx para aplicar los cambios
+# Restart Nginx to apply the changes
 sudo systemctl restart nginx
